@@ -1,11 +1,14 @@
+//Original source: https://github.com/tmcw/rust-sphericalmercator/
 use std::f64;
 
-static A: f64 = 6378137.0;
-static MAXEXTENT: f64 = 20037508.342789244;
+//static A: f64 = 6378137.0;//earth
+static A: f64 = 3393168.884;//mars
+//static MAXEXTENT: f64 = 20037508.342789244;//earth
+static MAXEXTENT: f64 = 10659954.438363877316745;//mars
 static D2R: f64 = f64::consts::PI / 180.0;
 static R2D: f64 = 180.0 / f64::consts::PI;
 
-#[derive(PartialEq, Clone, Copy, Debug)]
+#[derive(PartialEq, Clone, Copy, Debug, Default)]
 pub struct Coordinate {
     pub x: f64,
     pub y: f64,
@@ -42,13 +45,17 @@ mod tests {
                 y: -50.0
             }),
             Coordinate {
-                x: -2226389.8158654715,
-                y: -6446275.841017161
+                //x: -2226389.8158654715,//earth
+                //y: -6446275.841017161//earth
+                x: -1184439.382040431,//mars
+                y: -3429418.747421129//mars
             });
         assert_eq!(
             inverse(Coordinate {
-                x: -2226389.8158654715,
-                y: -6446275.841017161
+                //x: -2226389.8158654715,//earth
+                //y: -6446275.841017161//earth
+                x: -1184439.382040431,//mars
+                y: -3429418.747421129//mars
             }),
             Coordinate {
                 x: -20.0,
