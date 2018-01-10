@@ -1,4 +1,3 @@
-//Original source: https://github.com/tmcw/rust-sphericalmercator/
 use std::f64;
 
 //static A: f64 = 6378137.0;//earth
