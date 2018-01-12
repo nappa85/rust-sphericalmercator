@@ -1,12 +1,12 @@
 use std::f64;
 
 //planet radius
-//static A: f64 = 6378137.0;//earth
-static A: f64 = 3393168.884;//mars
+//const A: f64 = 6378137.0;//earth
+const A: f64 = 3393168.884;//mars
 //half planet circumference (radius * PI)
-pub static MAXEXTENT: f64 = A * f64::consts::PI;//mars
-static D2R: f64 = f64::consts::PI / 180.0;
-static R2D: f64 = 180.0 / f64::consts::PI;
+pub const MAXEXTENT: f64 = A * f64::consts::PI;//mars
+const D2R: f64 = f64::consts::PI / 180.0;
+const R2D: f64 = 180.0 / f64::consts::PI;
 
 #[derive(PartialEq, Clone, Copy, Debug, Default)]
 pub struct Coordinate {
