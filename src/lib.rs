@@ -1,9 +1,10 @@
 use std::f64;
 
+//planet radius
 //static A: f64 = 6378137.0;//earth
 static A: f64 = 3393168.884;//mars
-//static MAXEXTENT: f64 = 20037508.342789244;//earth
-static MAXEXTENT: f64 = 10659954.438363877316745;//mars
+//half planet circumference (radius * PI)
+pub static MAXEXTENT: f64 = A * f64::consts::PI;//mars
 static D2R: f64 = f64::consts::PI / 180.0;
 static R2D: f64 = 180.0 / f64::consts::PI;
 
