@@ -2,7 +2,7 @@ use std::f64;
 
 //planet radius
 //const A: f64 = 6378137.0;//earth
-const A: f64 = 3393168.884;//mars
+pub const A: f64 = 3393168.884;//mars
 //half planet circumference (radius * PI)
 pub const MAXEXTENT: f64 = A * f64::consts::PI;//mars
 const D2R: f64 = f64::consts::PI / 180.0;
